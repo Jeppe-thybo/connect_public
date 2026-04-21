@@ -4,6 +4,7 @@ trained_models/*
 /resources/
 /input/*
 /jobscripts/*
+/source/shell*
 /*.out
 *__pycache__/
 mcmc_plugin/connect.conf

@@ -4,7 +4,7 @@ output_file="${1}/montepython.log"
 MPARGS=" -p ${2}"
 MPARGS+=" -o $output_dir"
 MPARGS+=" -c covmat/base2018TTTEEE_lite.covmat"
-MPARGS+=" -N 1000000"
+MPARGS+=" -N 3000000"
 MPARGS+=" --conf ${3}"
 MPARGS+=" -j fast -f 2.1 --silent"
 MPARGS+=" --update 1000"
@@ -16,9 +16,9 @@ node=$6
 
 if ! [ $node == "None" ]
 then
-    MPI_ARGS=" -np 4 --host $node"
+    MPI_ARGS=" -np 6 --host $node"
 else
-    MPI_ARGS=" -np 4"
+    MPI_ARGS=" -np 6"
 fi
 
 mpirun $MPI_ARGS python montepython/MontePython.py run $MPARGS &> $output_file & pid=$!

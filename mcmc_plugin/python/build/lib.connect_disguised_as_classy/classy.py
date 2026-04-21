@@ -14,9 +14,8 @@ CONNECT_PATH = Path(FILE_PATH).parents[3]
 p_backup = [(i,sys.path.pop(i)) for i, p in enumerate(sys.path) if 'connect_disguised_as_classy' in p]
 m_backup = sys.modules.pop('classy')
 
-import classy as real_classy
-from classy import CosmoSevereError, CosmoComputationError
-
+import classy_NEDE as real_classy
+from classy_NEDE import CosmoSevereError, CosmoComputationError
 
 class Class(real_classy.Class):
     def __init__(self, input_parameters={}, model_name=None):
@@ -31,6 +30,7 @@ class Class(real_classy.Class):
             self.model_name = model_name
         self._model_name = model_name
         self.compute_class_background = False
+        self.z_sigma = [0.38,0.51,0.61]
 
             
     @property
@@ -46,6 +46,7 @@ class Class(real_classy.Class):
 
 
     def load_model(self, model_name=None):
+
         if not model_name == None:
             name = model_name
         else:
@@ -53,14 +54,46 @@ class Class(real_classy.Class):
                 raise NameError('No model was specified - Set the attribute model_name to the name of a trained CONNECT model')
             else:
                 name = self.model_name
-        try:
-            try:
-                self.model = tf.keras.models.load_model(os.path.join(CONNECT_PATH,'trained_models',name), compile=False)
-            except:
-                self.model = tf.keras.models.load_model(name, compile=False)
-        except:
-            raise NameError(f"No trained model by the name of '{name}'")
 
+        # Determine if multiple models were passed
+        if isinstance(name, (list, tuple)):
+
+            if len(name) != 2:
+                raise ValueError("When passing multiple connect_model entries, exactly two models must be provided.")
+
+            self.is_multi_model = True
+            self.models = []
+
+            for model_name in name:
+                try:
+                    try:
+                        model = tf.keras.models.load_model(
+                            os.path.join(CONNECT_PATH, 'trained_models', model_name),
+                            compile=False
+                        )
+                    except:
+                        model = tf.keras.models.load_model(model_name, compile=False)
+                except:
+                    raise NameError(f"No trained model by the name of '{model_name}'")
+
+                self.models.append(model)
+
+            # Use first model to read info dictionary (assume both trained consistently)
+            self.model = self.models[0]
+
+        else:
+            self.is_multi_model = False
+
+            try:
+                try:
+                    self.model = tf.keras.models.load_model(
+                        os.path.join(CONNECT_PATH, 'trained_models', name),
+                        compile=False
+                    )
+                except:
+                    self.model = tf.keras.models.load_model(name, compile=False)
+            except:
+                raise NameError(f"No trained model by the name of '{name}'")
         try:
             self.info = eval(self.model.get_raw_info().numpy().decode('utf-8'))
         except:
@@ -97,6 +130,7 @@ class Class(real_classy.Class):
             self.create_derived_methods()
         if 'extra_output' in self.info:
             self.extra_output = self.info['extra_output']
+            self.z_sigma = [0.38,0.51,0.61]
         self.output_interval = self.info['interval']
         if 'normalize' in self.info:
             raise RuntimeError('Unnormalising the output from models is deprecated. Models now output the correct values instead of normalised values.')
@@ -111,7 +145,6 @@ class Class(real_classy.Class):
                         'ln10^{10}A_s': 3.04
                         }
 
-
         # Initialize calculations (first one is always slower due to internal graph execution) 
         _params = []
         for par_name in self.param_names:
@@ -120,7 +153,14 @@ class Class(real_classy.Class):
             else:
                 _params.append(0.0)
         _v = tf.constant([_params])
-        _output_predict = self.model(_v).numpy()[0]
+
+        #_output_predict = self.model(_v).numpy()[0]
+        if self.is_multi_model:
+            _ = self.models[0](_v).numpy()[0]
+            _ = self.models[1](_v).numpy()[0]
+        else:
+            _ = self.model(_v).numpy()[0]
+        
         del _params
         del _v
         del _output_predict
@@ -190,10 +230,57 @@ class Class(real_classy.Class):
                     warnings.warn(f'The parameter {par_name} is not listed with a default value, so a value of 0.0 is used instead. You can add a default value to the load_model method in the file: {os.path.join(CONNECT_PATH,__file__)}')
             v = tf.constant([params])
         
-            self.output_predict = self.model(v).numpy()[0]
+            #self.output_predict = self.model(v).numpy()[0]
+
+            # Choose active model
+            if hasattr(self, 'is_multi_model') and self.is_multi_model:
+
+                if 'log10G_eff_ncdm_interacting' not in self.pars:
+                    raise ValueError(
+                        "Multi-model mode requires parameter "
+                        "'log10G_eff_ncdm_interacting' to choose model."
+                    )
+
+                val = float(self.pars['log10G_eff_ncdm_interacting'])
+
+                lower_bound = -2.75
+                upper_bound = -2.25
+
+                if val <= lower_bound:
+
+                    self.output_predict = self.models[0](v).numpy()[0]
+                    self._active_model_name = self.model_name[0]
+
+                elif val >= upper_bound:
+
+                    self.output_predict = self.models[1](v).numpy()[0]
+                    self._active_model_name = self.model_name[1]
+
+                else:
+
+                    w = (val - lower_bound) / (upper_bound - lower_bound)
+
+                    out_lower = self.models[0](v).numpy()[0]
+                    out_upper = self.models[1](v).numpy()[0]
+
+                    self.output_predict = (1 - w) * out_lower + w * out_upper
+                    self._active_model_name = f"Blending between ({self.model_name[0]}, {self.model_name[1]}) with log10G_eff_ncdm_interacting={val:.3f}"
+
+
+            else:
+                active_model = self.model
+                self._active_model_name = self.model_name
+                self.output_predict = active_model(v).numpy()[0]
+
         except:
             raise SystemError('No model has been loaded - Set the attribute model_name to the name of a trained CONNECT model')
-        self.cached_splines = {}
+
+    @property
+    def active_model_name(self):
+        if hasattr(self, '_active_model_name'):
+            return self._active_model_name
+        else:
+            return self.model_name
 
 
     def lensed_cl(self, lmax=2500):
@@ -294,6 +381,7 @@ class Class(real_classy.Class):
         names -= class_names
 
         if len(class_names) > 0:
+            print('Derived parameter not emulated from CONNECT:', class_names)      
             warnings.warn("Warning: Derived parameter not emulated by CONNECT. CLASS is used instead.")
             pars_update={}
             level='thermodynamics'
@@ -322,6 +410,28 @@ class Class(real_classy.Class):
             out_dict[name] = value 
 
         return out_dict
+
+
+    from scipy.interpolate import interp1d
+
+    def background_at_z(self, z, mode='normal_info'):
+        """
+        Emulate CLASS's background_at_z function using get_background().
+        Returns a dict of background quantities at a single redshift z.
+        """
+        bg_table = self.get_background()  # get full emulated background
+        z_grid = bg_table['z']
+
+        result = {}
+        for key, values in bg_table.items():
+            if key == 'z':
+                continue
+            # Interpolate each quantity at the requested z
+            interp_func = interp1d(z_grid, values, kind='cubic', bounds_error=False, fill_value="extrapolate")
+            result[key] = float(interp_func(z))
+
+        return result
+
 
 
     def get_background(self):
@@ -389,7 +499,6 @@ class Class(real_classy.Class):
     # These methods enable BAO and SN type likelihoods
     # (bao_boss_dr12, bao_smallz_2014, Pantheon, etc.)
     # to use emulated backround quantities
-
     def Hubble(self, z):
         if 'H [1/Mpc]' in self.output_bg:
             if not hasattr(self, 'output_predict'):
@@ -415,22 +524,110 @@ class Class(real_classy.Class):
         else:
             raise ValueError("The Hubble parameter has not been emulated. You can use CLASS for all background computations by setting 'compute_class_background' to True.")
 
+    #Added luminosity distance for Pantheon likelihood evaluation
+    def luminosity_distance(self, z):
+        return (1+z)**2 * self.angular_distance(z)
+    
+    #Added sigma8 and sclae_independent growth factor, f, to use bao_fs_boss_dr12
+    def scale_independent_growth_factor_f(self, z):
+        if 'gr.fac. f' in self.output_bg:
+            if not hasattr(self, 'output_predict'):
+                self.compute()
+
+            if z in self.z_bg:
+                index = (
+                    self.output_interval['bg']['gr.fac. f'][0]
+                    + self.z_bg.index(z)
+                )
+                return self.output_predict[index]
+
+            elif len(self.z_bg) > 2:
+                if 'growth_f' in self.cached_splines:
+                    return float(self.cached_splines['growth_f'](z))
+                else:
+                    out = self.output_predict[
+                        self.output_interval['bg']['gr.fac. f'][0]:
+                        self.output_interval['bg']['gr.fac. f'][1]
+                    ]
+                    spline = CubicSpline(self.z_bg, out, bc_type='natural')
+                    self.cached_splines['growth_f'] = spline
+                    return float(spline(z))
+
+            elif self.compute_class_background:
+                return super(Class, self).scale_independent_growth_factor_f(z)
+
+            else:
+                raise ValueError(
+                    f"The requested redshift {z} was not emulated and there are "
+                    "too few values for interpolation."
+                )
+
+        elif self.compute_class_background:
+            return super(Class, self).scale_independent_growth_factor_f(z)
+
+        else:
+            raise ValueError(
+                "The scale-independent growth factor f has not been emulated."
+            )
+        
+    def sigma(self, scale, z):
+        if 'sigma_of_z' in self.extra_output:
+            if not hasattr(self, 'output_predict'):
+                self.compute()
+
+            if z in self.z_sigma:
+                index = (
+                    self.output_interval['extra']['sigma_of_z'][0]
+                    + self.z_sigma.index(z)
+                )
+                return self.output_predict[index]
+
+            else:
+                raise ValueError(
+                    f"Sigma(z) was requested at z={z}, but this redshift "
+                    "was not emulated."
+                )
+
+        elif self.compute_class_background:
+            return super(Class, self).sigma(scale, z)
+
+        else:
+            raise ValueError(
+                "sigma(z) has not been emulated. Enable CLASS fallback or "
+                "add sigma_of_z to extra_output."
+            )
+
+    def h(self):
+        if not hasattr(self, 'output_predict'):
+            self.compute()
+
+        if 'H0' in self.output_derived:
+            idx = self.output_interval['derived']['H0']
+            return self.output_predict[idx] / 100.0
+        else:
+            raise ValueError(
+                "H0 is not emulated as a derived parameter. "
+                "Cannot compute h consistently."
+        )
+        
     def angular_distance(self, z):
         if 'ang.diam.dist.' in self.output_bg:
             if not hasattr(self, 'output_predict'):
                 self.compute()
-            if z in self.z_bg:
+            if type(z) == float and z in self.z_bg:
                 index = self.output_interval['bg']['ang.diam.dist.'][0]+self.z_bg.index(z)
                 return self.output_predict[index]
             elif len(self.z_bg) > 2:
-                if 'angular_distance' in self.cached_splines:
-                    return float(self.cached_splines['angular_distance'](z))
-                else:
+                if 'angular_distance' not in self.cached_splines:
                     out = self.output_predict[self.output_interval['bg']['ang.diam.dist.'][0]:
-                                              self.output_interval['bg']['ang.diam.dist.'][1]]
+                                            self.output_interval['bg']['ang.diam.dist.'][1]]
                     spline = CubicSpline(self.z_bg, out, bc_type='natural')
-                    self.cached_splines['anugular_distance'] = spline
+                    self.cached_splines['angular_distance'] = spline
+                spline = self.cached_splines['angular_distance']
+                if type(z) == float:
                     return float(spline(z))
+                else:
+                    return spline(z)
             elif self.compute_class_background:
                 return super(Class, self).Hubble(z)
             else:
@@ -439,6 +636,7 @@ class Class(real_classy.Class):
             return super(Class, self).Hubble(z)
         else:
             raise ValueError("The angular diameter distance has not been emulated. You can use CLASS for all background computations by setting 'compute_class_background' to True.")
+
 
     def rs_drag(self):
         if 'rs_drag' in self.extra_output:

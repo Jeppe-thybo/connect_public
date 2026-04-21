@@ -8,6 +8,15 @@ import numpy as np
 from .custom_functions import LossFunctions
 from .architecture.sequential_models import Dense_model
 from .callbacks import KeepBestEpoch
+from tensorflow.keras.callbacks import EarlyStopping
+
+
+class EarlyStopping(tf.keras.callbacks.EarlyStopping):
+    def on_train_end(self, logs=None):
+        super().on_train_end(logs)
+        if self.stopped_epoch > 0:
+            print(f'Early stopping occurred at epoch {self.stopped_epoch + 1}.')
+            print(f'Restoring model weights from the end of the best epoch: {self.best_epoch}.')
 
 class Training():
 
@@ -403,6 +412,7 @@ class Training():
                                         beta_2=0.999,
                                         epsilon=1e-4,
                                         amsgrad=True,
+                                        clipnorm=1.0,
                                         name='Adam')
 
         self.training_success = False
@@ -434,7 +444,8 @@ class Training():
         self.history = self.model.fit(self.train_dataset,
                                       epochs=self.param.epochs,
                                       validation_data=self.val_dataset,
-                                      callbacks=[KeepBestEpoch()])
+                                      callbacks=[KeepBestEpoch(),
+                                      EarlyStopping(monitor='val_loss', patience=200, restore_best_weights=True)])
 
         if output_file != None:
             sys.stdout.close()

@@ -16,7 +16,7 @@ parameters={'omega_b'        :  [ 0.014,          0.039          ],
 # Specify additional parameters
 
 
-
+class_version = 'classy_nu'
 
 #########--------- Training parameters ---------#########
 
@@ -25,9 +25,9 @@ train_ratio          = 0.95		  # Amount of data used for training
 
 val_ratio            = 0.05	      	  # Amount of training data used for validation
 
-epochs               = 100	      	  # Number of cycles/epochs during training
+epochs               = 1000	      	  # Number of cycles/epochs during training
 
-batchsize            = 512	          # Batchsize of data when training
+batchsize            = 8	          # Batchsize of data when training
 
 activation_function  = 'alsing'	          # Activation function - as defined in TensorFlow
                                           # or source/custom_functions.py
@@ -47,7 +47,7 @@ normalisation_method = 'standardisation'  # Normalisation method for output data
 
 #########--------- Sampling parameters ---------#########
 
-N = 1e+4       # Amount of points in lhc. When using the iterative 
+N = 100       # Amount of points in lhc. When using the iterative 
                # method this number refers to only the initial lhc
 
 output_Cl      = ['tt', 'te', 'ee']         # Cl spectra in output
@@ -61,8 +61,8 @@ output_bg      = ['ang.diam.dist.',         # Background functions in output
 		  ]
 z_bg_list      = [0.35, 0.57, 0.106]        # Optional list of z-values for background
 
-output_th      = ['w_b',                    # Thermodynamics functions in output
-	          'tau_d'
+output_th      = ['w_b'                    # Thermodynamics functions in output
+	          
 		  ]
 z_th_list      = [0.35, 0.57, 0.106]        # Optional list of z-values	for thermodynamics
 
@@ -95,7 +95,7 @@ prior_ranges     = parameters            # Prior ranges for mcmc sampling. A dic
                                          # with a logarithmic prior
 
 
-sampling      = 'iterative'    # Sampling of training data can be done with the
+sampling      = 'hypersphere'    # Sampling of training data can be done with the
                                # methods 'lhc' and 'iterative'. Some parameters
                                # are only usable wth the iterative method
 
