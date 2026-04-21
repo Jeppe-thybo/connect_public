@@ -1,0 +1,136 @@
+# Parameter file for the example model
+
+# Specify the parameters for the model, their minimum value and their maximum value
+# (as you would in CLASS) 
+#
+#           | name                   | min-value     | max-value      |
+#           |------------------------|---------------|----------------|
+parameters={'omega_b'             :  [ 0.010,          0.039          ],
+            'omega_cdm'           :  [ 1e-2,           0.25           ],
+            'h'                   :  [ 0.5,            1              ],
+            'ln10^{10}A_s'        :  [ 1,              5              ],
+            'n_s'                 :  [ 0.7,            1.3            ],
+            'tau_reio'            :  [ 0.01,           0.4            ],
+            'delta_Neff_drmd'     :  [ 0,              3              ],
+            'f_idm_drmd'          :  [ 0,              1              ],
+            'log10z_stop'         :  [ 2,              5              ],
+            'log10_G_over_aH_drmd':  [ 2,              14             ]}
+
+
+# Specify additional parameters
+
+class_version = 'classy_NEDE'
+
+
+#########--------- Training parameters ---------#########
+
+train_ratio          = 0.95		  # Amount of data used for training
+                                          # (rest is used for testing)
+
+val_ratio            = 0.05	      	  # Amount of training data used for validation
+
+epochs               = 2000	      	  # Number of cycles/epochs during training
+
+batchsize            = 256	          # Batchsize of data when training
+
+activation_function  = 'alsing'	          # Activation function - as defined in TensorFlow
+                                          # or source/custom_functions.py
+
+loss_function        = 'cosmic_variance'  # Loss function - as defined in TensorFlow
+                                          # or source/custom_functions.py
+
+N_hidden_layers      = 6                  # Number of hidden layers in fully-connected
+                                          # architecture
+
+N_nodes	             = 512	          # Number of nodes in each hidden layer
+
+normalisation_method = 'standardisation'  # Normalisation method for output data
+
+
+
+
+#########--------- Sampling parameters ---------#########
+
+N = 10000        # Amount of points in lhc. When using the iterative 
+                # method this number refers to only the initial lhc
+
+output_Cl      = ['tt', 'te', 'ee','pp']         # Cl spectra in output
+
+output_Pk      = ['pk','pk_cb']		    # Matter power spectra in output
+z_Pk_list      = [0.0, 1.5, 13.65]	    # z-values for matter power spectra
+
+output_bg      = ['ang.diam.dist.',         # Background functions in output
+	              'conf. time [Mpc]',
+	              'H [1/Mpc]'
+		  ]
+
+z_bg_list      = [0.01012, 0.01318, 0.01530, 0.01678, 0.01754, 0.02091, 0.02349, 0.02557, 0.02752, 0.02950, 0.03184, 0.03378, 0.03507, 0.03837, 0.04437, 0.04976, 0.05573, 0.06455, 0.07180, 0.08282, 0.09391, 0.10300, 0.10600, 0.11242, 0.11966, 0.12376, 0.12903, 0.13639, 0.13880, 0.14533, 0.15000, 0.15060, 0.15517, 0.16035, 0.16595, 0.17350, 0.17696, 0.17958, 0.18322, 0.18563, 0.19120, 0.19726, 0.20267, 0.20548, 0.21060, 0.21353, 0.21887, 0.22334, 0.22916, 0.23542, 0.24060, 0.24448, 0.24835, 0.25029, 0.25625, 0.26129, 0.26410, 0.26891, 0.27544, 0.28332, 0.28662, 0.29135, 0.29500, 0.29888, 0.30260, 0.30800, 0.31468, 0.32070, 0.32880, 0.33160, 0.34120, 0.35090, 0.36060, 0.37010, 0.37425, 0.38000, 0.38492, 0.40439, 0.41940, 0.42920, 0.44238, 0.46070, 0.47516, 0.50016, 0.51000, 0.51116, 0.53316, 0.55819, 0.57938, 0.59116, 0.61000, 0.62116, 0.64339, 0.69038, 0.70600, 0.71839, 0.73500, 0.75039, 0.76920, 0.80892, 0.84116, 0.86720, 0.92516, 0.93400, 0.95039, 1.00240, 1.30500, 1.32100, 1.48400, 2.26000, 2.33000]
+
+output_th      = ['w_b']                    # Thermodynamics functions in output
+
+z_th_list      = [0.01012, 0.01318, 0.01530, 0.01678, 0.01754, 0.02091, 0.02349, 0.02557, 0.02752, 0.02950, 0.03184, 0.03378, 0.03507, 0.03837, 0.04437, 0.04976, 0.05573, 0.06455, 0.07180, 0.08282, 0.09391, 0.10300, 0.10600, 0.11242, 0.11966, 0.12376, 0.12903, 0.13639, 0.13880, 0.14533, 0.15000, 0.15060, 0.15517, 0.16035, 0.16595, 0.17350, 0.17696, 0.17958, 0.18322, 0.18563, 0.19120, 0.19726, 0.20267, 0.20548, 0.21060, 0.21353, 0.21887, 0.22334, 0.22916, 0.23542, 0.24060, 0.24448, 0.24835, 0.25029, 0.25625, 0.26129, 0.26410, 0.26891, 0.27544, 0.28332, 0.28662, 0.29135, 0.29500, 0.29888, 0.30260, 0.30800, 0.31468, 0.32070, 0.32880, 0.33160, 0.34120, 0.35090, 0.36060, 0.37010, 0.37425, 0.38000, 0.38492, 0.40439, 0.41940, 0.42920, 0.44238, 0.46070, 0.47516, 0.50016, 0.51000, 0.51116, 0.53316, 0.55819, 0.57938, 0.59116, 0.61000, 0.62116, 0.64339, 0.69038, 0.70600, 0.71839, 0.73500, 0.75039, 0.76920, 0.80892, 0.84116, 0.86720, 0.92516, 0.93400, 0.95039, 1.00240, 1.30500, 1.32100, 1.48400, 2.26000, 2.33000]
+
+output_derived = ['z_reio',                 # Derived parameters in output
+		  'Omega_Lambda', 
+		  'YHe', 
+		  'A_s', 
+		  'sigma8', 
+		  '100*theta_s',
+                  'H0',
+                  'rs_d',
+                  'Omega_m',
+                  'f_drmd',
+                  'z_dec_drmd'
+]
+
+extra_output   = {'rs_drag': 'cosmo.rs_drag()'}  # Additional output {name: string of code}
+
+
+extra_input    = {'k_pivot': 0.05,	    # Extra input to CLASS
+		  'N_ur':    2.0328,
+		  'N_ncdm':  1,
+		  'm_ncdm':  0.06,
+		  'T_ncdm':  0.71611,
+                  'P_k_max_h/Mpc': 1.0,
+                  'start_large_k_at_tau_h_over_tau_k': 0.00002
+		  }
+
+#bestfit_guesses = {'parameter': value}  # Guesses for bestfit for parameters
+
+#sigma_guesses   = {'parameter': value}  # Guesses for sigma for parameters 
+
+prior_ranges     = parameters            # Prior ranges for mcmc sampling. A dictionary
+                                         # in the same form as parameters
+
+#log_priors      = []                    # List of parameter names to be sampled
+                                         # with a logarithmic prior
+
+
+sampling      = 'iterative'    # Sampling of training data can be done with the
+                               # methods 'lhc' and 'iterative'. Some parameters
+                               # are only usable wth the iterative method
+
+hypersphere_covmat = '/home/jthybo/connect_public/resources/montepython_public/covmat/base2018TTTEEE_lite.covmat'
+
+mcmc_sampler  = 'montepython'  # mcmc sampler to use in iterations (cobaya or montepython)
+
+initial_model = None           # Name of initial model to start the iterations
+
+mcmc_tol      = 0.01           # Tolerance of R-1 values for individual mcmc runs
+
+iter_tol      = 0.1            # Tolerance of R-1 values for subsequent iterations
+
+N_max_points  = 35000           # The maximum number of points to take from each iteration
+
+keep_first_iteration = False   # Whether to keep data from first iteration (usually bad)
+
+sampling_likelihoods = ['Planck_highl_TTTEEE_lite', 'Planck_lowl_EE', 'Planck_lowl_TT']
+
+
+#########---------- Saving parameters ----------#########
+
+jobname = 'DRMD_final'     # Name job and output folder
+
+save_name = 'DRMD_final'        # Name of trained models
+
+overwrite_model = True      # Whether or not to overwrite model names or to append a suffix

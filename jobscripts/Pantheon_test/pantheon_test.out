@@ -1,0 +1,369 @@
+========= Job started at Mon Apr 20 12:13:39 CEST 2026 ==========
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) lapack/3.9.1     2) openmpi/4.0.3
+
+The following have been reloaded with a version change:
+  1) gcc/13.2.0 => gcc/14.2.0
+
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-20 12:14:13.761236: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-20 12:14:13.797875: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-20 12:14:14.191598: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-20 12:14:14.192438: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-20 12:14:15.899915: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ /!\ PyMultiNest detected but MultiNest likely not installed correctly. You can
+     safely ignore this if not running with option -m NS
+Running Monte Python v3.5.0
+
+with CLASS v0.3.0
+
+Testing likelihoods for:
+ ->Planck_highl_TTTEEE_lite, Planck_lowl_EE, Planck_lowl_TT, BK18lf_dust, bao_fs_boss_dr12, bao_smallz_2014, Planck_lensing, Pantheon
+
+0 (999, 66)
+(999, 66)
+1 (999, 66)
+(999, 66)
+2 (999, 66)
+(999, 66)
+3 (999, 66)
+(999, 66)
+4 (999, 66)
+(999, 66)
+5 (999, 66)
+(999, 66)
+6 (999, 66)
+(999, 66)
+7 (999, 66)
+(999, 66)
+8 (999, 66)
+(999, 66)
+Covmat read with shape (594, 594)
+1 1
+----
+clik version 3be036bbb4f9
+  plik_cmbonly
+Checking likelihood '/home/jthybo/connect_public/resources/planck2018/code/plc_3.0/plc-3.01/../../../baseline/plc_3.0/hi_l/plik_lite/plik_lite_v22_TTTEEE.clik' on test data. got -292.286 expected -292.286 (diff -3.86228e-09)
+----
+Initializing SimAll
+----
+clik version 3be036bbb4f9
+  simall simall_EE_BB_TE
+Checking likelihood '/home/jthybo/connect_public/resources/planck2018/code/plc_3.0/plc-3.01/../../../baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik' on test data. got -197.99 expected -197.99 (diff -4.1778e-08)
+----
+----
+clik version 3be036bbb4f9
+  gibbs_gauss b13c8fda-1837-41b5-ae2d-78d6b723fcf1
+Checking likelihood '/home/jthybo/connect_public/resources/planck2018/code/plc_3.0/plc-3.01/../../../baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik' on test data. got -11.6257 expected -11.6257 (diff -1.07424e-09)
+----
+Checking lensing likelihood '/home/jthybo/connect_public/resources/planck2018/code/plc_3.0/plc-3.01/../../../baseline/plc_3.0/lensing/smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8.clik_lensing' on test data. got -4.42102
+RecursionError: maximum recursion depth exceeded
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/jthybo/connect_public/resources/montepython_public/montepython/MontePython.py", line 38, in <module>
+    sys.exit(mpi_run())
+  File "/home/jthybo/connect_public/resources/montepython_public/montepython/run.py", line 102, in mpi_run
+    cosmo, data, command_line, success = safe_initialisation(
+  File "/home/jthybo/connect_public/resources/montepython_public/montepython/run.py", line 191, in safe_initialisation
+    cosmo, data, command_line, success = initialise(custom_command)
+  File "/home/jthybo/connect_public/resources/montepython_public/montepython/initialise.py", line 80, in initialise
+    cosmo = recover_cosmological_module(data)
+  File "/home/jthybo/connect_public/resources/montepython_public/montepython/initialise.py", line 185, in recover_cosmological_module
+    from classy import Class
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "/home/jthybo/connect_public/mcmc_plugin/python/build/lib.3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]/classy.py", line 17, in <module>
+    import classy as real_classy
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1411, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1544, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 147, in _path_stat
+RecursionError
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-04-20T13:29:27.445] error: *** JOB 4798438 ON s61n05 CANCELLED AT 2026-04-20T13:29:27 DUE to SIGNAL Terminated ***
+[2026-04-20T13:29:27.468] error: *** STEP 4798438.0 ON s61n05 CANCELLED AT 2026-04-20T13:29:27 DUE to SIGNAL Terminated ***

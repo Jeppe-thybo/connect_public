@@ -1,0 +1,799 @@
+========= Job started at Wed Apr 15 13:40:12 CEST 2026 ==========
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) lapack/3.9.1
+
+The following have been reloaded with a version change:
+  1) gcc/13.2.0 => gcc/14.2.0
+
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-15 13:40:44.897028: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-15 13:40:44.927480: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:40:45.290615: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:40:45.347637: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-15 13:41:05.742896: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-15 13:41:35.985333: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-15 13:41:35.986935: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:41:36.010326: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:41:36.010592: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-15 13:41:40.722568: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-15 13:41:49.811732: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-15 13:41:49.813524: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:41:49.837290: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:41:49.837586: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-15 13:41:53.950597: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-15 13:42:04.437320: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-15 13:42:04.438980: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:42:04.462626: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:42:04.463042: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-15 13:42:11.207597: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-15 13:42:27.731535: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-15 13:42:27.733469: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:42:27.777095: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:42:27.777362: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-15 13:42:30.554146: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+2026-04-15 13:42:36.439846: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-15 13:42:36.444229: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:42:36.471159: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2026-04-15 13:42:36.471449: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-04-15 13:42:37.012236: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+ /!\ PyMultiNest detected but MultiNest likely not installed correctly. You can
+     safely ignore this if not running with option -m NS
+0 (999, 66)
+(999, 66)
+1 (999, 66)
+(999, 66)
+2 (999, 66)
+(999, 66)
+3 (999, 66)
+(999, 66)
+4 (999, 66)
+(999, 66)
+5 (999, 66)
+(999, 66)
+6 (999, 66)
+(999, 66)
+7 (999, 66)
+(999, 66)
+8 (999, 66)
+(999, 66)
+Covmat read with shape (594, 594)
+Creating chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt
+
+ /!\ PyMultiNest detected but MultiNest likely not installed correctly. You can
+     safely ignore this if not running with option -m NS
+ /!\ PyMultiNest detected but MultiNest likely not installed correctly. You can
+     safely ignore this if not running with option -m NS
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 339 points of burn-in, and first 50 percent, keep 331 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 339 points of burn-in, and first 50 percent, keep 331 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 463 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 463 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 463 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 2397 points of burn-in, and first 50 percent, keep 302 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 963 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.256993 	for  omega_b
+           0.060527 	for  omega_cdm
+           0.319113 	for  h
+           0.952519 	for  ln10^{10}A_s
+           0.924123 	for  n_s
+           0.339358 	for  tau_reio
+           1.283278 	for  r
+           0.271104 	for  m_ncdm_interacting
+           0.253260 	for  log10G_eff_ncdm_interacting
+           2.267530 	for  deg_ncdm_interacting
+           0.114607 	for  m_ncdm_standard
+           3.953153 	for  deg_ncdm_standard
+           2.313935 	for  M
+           19.048408 	for  BBdust
+           0.348179 	for  BBsync
+           11.202182 	for  BBalphadust
+           0.319291 	for  BBbetadust
+           1.634741 	for  BBalphasync
+           11.492197 	for  BBbetasync
+           0.091201 	for  BBdustsynccorr
+           0.173221 	for  A_planck
+           0.323576 	for  H0
+           0.190402 	for  sigma8
+           0.085122 	for  Omega_Lambda
+           0.818555 	for  YHe
+           0.818800 	for  A_s
+           0.330840 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 2397 points of burn-in, and first 50 percent, keep 302 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 963 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.256993 	for  omega_b
+           0.060527 	for  omega_cdm
+           0.319113 	for  h
+           0.952519 	for  ln10^{10}A_s
+           0.924123 	for  n_s
+           0.339358 	for  tau_reio
+           1.283278 	for  r
+           0.271104 	for  m_ncdm_interacting
+           0.253260 	for  log10G_eff_ncdm_interacting
+           2.267530 	for  deg_ncdm_interacting
+           0.114607 	for  m_ncdm_standard
+           3.953153 	for  deg_ncdm_standard
+           2.313935 	for  M
+           19.048408 	for  BBdust
+           0.348179 	for  BBsync
+           11.202182 	for  BBalphadust
+           0.319291 	for  BBbetadust
+           1.634741 	for  BBalphasync
+           11.492197 	for  BBbetasync
+           0.091201 	for  BBdustsynccorr
+           0.173221 	for  A_planck
+           0.323576 	for  H0
+           0.190402 	for  sigma8
+           0.085122 	for  Omega_Lambda
+           0.818555 	for  YHe
+           0.818800 	for  A_s
+           0.330840 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 2397 points of burn-in, and first 50 percent, keep 802 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 1463 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.503246 	for  omega_b
+           0.080317 	for  omega_cdm
+           1.214503 	for  h
+           0.013078 	for  ln10^{10}A_s
+           1.074684 	for  n_s
+           0.315583 	for  tau_reio
+           0.464563 	for  r
+           0.006931 	for  m_ncdm_interacting
+           0.001873 	for  log10G_eff_ncdm_interacting
+           6.055620 	for  deg_ncdm_interacting
+           0.280026 	for  m_ncdm_standard
+           6.154061 	for  deg_ncdm_standard
+           6.207847 	for  M
+           52.460226 	for  BBdust
+           0.051777 	for  BBsync
+           9.040601 	for  BBalphadust
+           0.086199 	for  BBbetadust
+           32.070846 	for  BBalphasync
+           2.107242 	for  BBbetasync
+           0.325625 	for  BBdustsynccorr
+           0.447791 	for  A_planck
+           1.252579 	for  H0
+           0.674702 	for  sigma8
+           2.078786 	for  Omega_Lambda
+           0.036915 	for  YHe
+           0.036921 	for  A_s
+           0.416826 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 2397 points of burn-in, and first 50 percent, keep 802 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1075 points of burn-in, and first 50 percent, keep 1463 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.503246 	for  omega_b
+           0.080317 	for  omega_cdm
+           1.214503 	for  h
+           0.013078 	for  ln10^{10}A_s
+           1.074684 	for  n_s
+           0.315583 	for  tau_reio
+           0.464563 	for  r
+           0.006931 	for  m_ncdm_interacting
+           0.001873 	for  log10G_eff_ncdm_interacting
+           6.055620 	for  deg_ncdm_interacting
+           0.280026 	for  m_ncdm_standard
+           6.154061 	for  deg_ncdm_standard
+           6.207847 	for  M
+           52.460226 	for  BBdust
+           0.051777 	for  BBsync
+           9.040601 	for  BBalphadust
+           0.086199 	for  BBbetadust
+           32.070846 	for  BBalphasync
+           2.107242 	for  BBbetasync
+           0.325625 	for  BBdustsynccorr
+           0.447791 	for  A_planck
+           1.252579 	for  H0
+           0.674702 	for  sigma8
+           2.078786 	for  Omega_Lambda
+           0.036915 	for  YHe
+           0.036921 	for  A_s
+           0.416826 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 1913 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 4337 points of burn-in, and first 50 percent, keep 332 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 1913 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.007405 	for  omega_b
+           0.004720 	for  omega_cdm
+           0.032895 	for  h
+           0.076274 	for  ln10^{10}A_s
+           0.317804 	for  n_s
+           0.053952 	for  tau_reio
+           0.011256 	for  r
+           0.039010 	for  m_ncdm_interacting
+           0.013561 	for  log10G_eff_ncdm_interacting
+           6.122718 	for  deg_ncdm_interacting
+           0.157490 	for  m_ncdm_standard
+           4.991068 	for  deg_ncdm_standard
+           1.062971 	for  M
+           1.286638 	for  BBdust
+           0.036966 	for  BBsync
+           0.698344 	for  BBalphadust
+           0.000034 	for  BBbetadust
+           32.280300 	for  BBalphasync
+           3.019062 	for  BBbetasync
+           1.446433 	for  BBdustsynccorr
+           0.119246 	for  A_planck
+           0.033916 	for  H0
+           0.106480 	for  sigma8
+           0.089320 	for  Omega_Lambda
+           0.003220 	for  YHe
+           0.003220 	for  A_s
+           0.051162 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 4337 points of burn-in, and first 50 percent, keep 332 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 1913 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.007405 	for  omega_b
+           0.004720 	for  omega_cdm
+           0.032895 	for  h
+           0.076274 	for  ln10^{10}A_s
+           0.317804 	for  n_s
+           0.053952 	for  tau_reio
+           0.011256 	for  r
+           0.039010 	for  m_ncdm_interacting
+           0.013561 	for  log10G_eff_ncdm_interacting
+           6.122718 	for  deg_ncdm_interacting
+           0.157490 	for  m_ncdm_standard
+           4.991068 	for  deg_ncdm_standard
+           1.062971 	for  M
+           1.286638 	for  BBdust
+           0.036966 	for  BBsync
+           0.698344 	for  BBalphadust
+           0.000034 	for  BBbetadust
+           32.280300 	for  BBalphasync
+           3.019062 	for  BBbetasync
+           1.446433 	for  BBdustsynccorr
+           0.119246 	for  A_planck
+           0.033916 	for  H0
+           0.106480 	for  sigma8
+           0.089320 	for  Omega_Lambda
+           0.003220 	for  YHe
+           0.003220 	for  A_s
+           0.051162 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 4337 points of burn-in, and first 50 percent, keep 832 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 2413 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.025167 	for  omega_b
+           0.197148 	for  omega_cdm
+           0.221284 	for  h
+           0.013729 	for  ln10^{10}A_s
+           1.284631 	for  n_s
+           0.446287 	for  tau_reio
+           0.029868 	for  r
+           0.058093 	for  m_ncdm_interacting
+           0.231022 	for  log10G_eff_ncdm_interacting
+           10.167932 	for  deg_ncdm_interacting
+           0.089655 	for  m_ncdm_standard
+           7.517631 	for  deg_ncdm_standard
+           2.202480 	for  M
+           0.239632 	for  BBdust
+           0.916460 	for  BBsync
+           2.527873 	for  BBalphadust
+           0.127905 	for  BBbetadust
+           12.271230 	for  BBalphasync
+           3.791915 	for  BBbetasync
+           4.888099 	for  BBdustsynccorr
+           0.353687 	for  A_planck
+           0.223151 	for  H0
+           0.304679 	for  sigma8
+           0.097712 	for  Omega_Lambda
+           0.257282 	for  YHe
+           0.257312 	for  A_s
+           0.384806 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 4337 points of burn-in, and first 50 percent, keep 832 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 2413 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.025167 	for  omega_b
+           0.197148 	for  omega_cdm
+           0.221284 	for  h
+           0.013729 	for  ln10^{10}A_s
+           1.284631 	for  n_s
+           0.446287 	for  tau_reio
+           0.029868 	for  r
+           0.058093 	for  m_ncdm_interacting
+           0.231022 	for  log10G_eff_ncdm_interacting
+           10.167932 	for  deg_ncdm_interacting
+           0.089655 	for  m_ncdm_standard
+           7.517631 	for  deg_ncdm_standard
+           2.202480 	for  M
+           0.239632 	for  BBdust
+           0.916460 	for  BBsync
+           2.527873 	for  BBalphadust
+           0.127905 	for  BBbetadust
+           12.271230 	for  BBalphasync
+           3.791915 	for  BBbetasync
+           4.888099 	for  BBdustsynccorr
+           0.353687 	for  A_planck
+           0.223151 	for  H0
+           0.304679 	for  sigma8
+           0.097712 	for  Omega_Lambda
+           0.257282 	for  YHe
+           0.257312 	for  A_s
+           0.384806 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 2913 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.000000 	for  omega_b
+           0.000000 	for  omega_cdm
+           0.000000 	for  h
+           0.000000 	for  ln10^{10}A_s
+           0.000000 	for  n_s
+           0.000000 	for  tau_reio
+           0.000000 	for  r
+           0.000000 	for  m_ncdm_interacting
+           0.000000 	for  log10G_eff_ncdm_interacting
+           0.000000 	for  deg_ncdm_interacting
+           0.000000 	for  m_ncdm_standard
+           0.000000 	for  deg_ncdm_standard
+           0.000000 	for  M
+           0.000000 	for  BBdust
+           0.000000 	for  BBsync
+           0.000000 	for  BBalphadust
+           0.000000 	for  BBbetadust
+           0.000000 	for  BBalphasync
+           0.000000 	for  BBbetasync
+           0.000000 	for  BBdustsynccorr
+           0.000000 	for  A_planck
+           0.000000 	for  H0
+           0.000000 	for  sigma8
+           0.000000 	for  Omega_Lambda
+           0.000000 	for  YHe
+           0.000000 	for  A_s
+           0.000000 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 6271 points of burn-in, and first 50 percent, keep 365 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 2913 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.040109 	for  omega_b
+           0.113538 	for  omega_cdm
+           0.025705 	for  h
+           0.267252 	for  ln10^{10}A_s
+           0.514273 	for  n_s
+           0.000391 	for  tau_reio
+           0.036212 	for  r
+           0.049434 	for  m_ncdm_interacting
+           1.105665 	for  log10G_eff_ncdm_interacting
+           7.881735 	for  deg_ncdm_interacting
+           0.083027 	for  m_ncdm_standard
+           6.556794 	for  deg_ncdm_standard
+           2.652300 	for  M
+           0.053462 	for  BBdust
+           0.080144 	for  BBsync
+           0.104688 	for  BBalphadust
+           0.135825 	for  BBbetadust
+           5.286103 	for  BBalphasync
+           0.925960 	for  BBbetasync
+           3.638736 	for  BBdustsynccorr
+           0.192683 	for  A_planck
+           0.025647 	for  H0
+           0.077167 	for  sigma8
+           0.003997 	for  Omega_Lambda
+           0.113925 	for  YHe
+           0.113938 	for  A_s
+           0.001863 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 6271 points of burn-in, and first 50 percent, keep 365 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 3413 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.043935 	for  omega_b
+           0.007395 	for  omega_cdm
+           0.006940 	for  h
+           0.141236 	for  ln10^{10}A_s
+           0.511863 	for  n_s
+           0.000052 	for  tau_reio
+           0.090149 	for  r
+           0.046012 	for  m_ncdm_interacting
+           2.473498 	for  log10G_eff_ncdm_interacting
+           5.642891 	for  deg_ncdm_interacting
+           0.070238 	for  m_ncdm_standard
+           4.444770 	for  deg_ncdm_standard
+           2.747807 	for  M
+           0.143045 	for  BBdust
+           0.086162 	for  BBsync
+           0.060227 	for  BBalphadust
+           0.098731 	for  BBbetadust
+           1.461867 	for  BBalphasync
+           0.676301 	for  BBbetasync
+           1.639416 	for  BBdustsynccorr
+           0.105426 	for  A_planck
+           0.007004 	for  H0
+           0.038895 	for  sigma8
+           0.007552 	for  Omega_Lambda
+           0.023220 	for  YHe
+           0.023222 	for  A_s
+           0.000192 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 6271 points of burn-in, and first 50 percent, keep 365 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 3413 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.043935 	for  omega_b
+           0.007395 	for  omega_cdm
+           0.006940 	for  h
+           0.141236 	for  ln10^{10}A_s
+           0.511863 	for  n_s
+           0.000052 	for  tau_reio
+           0.090149 	for  r
+           0.046012 	for  m_ncdm_interacting
+           2.473498 	for  log10G_eff_ncdm_interacting
+           5.642891 	for  deg_ncdm_interacting
+           0.070238 	for  m_ncdm_standard
+           4.444770 	for  deg_ncdm_standard
+           2.747807 	for  M
+           0.143045 	for  BBdust
+           0.086162 	for  BBsync
+           0.060227 	for  BBalphadust
+           0.098731 	for  BBbetadust
+           1.461867 	for  BBalphasync
+           0.676301 	for  BBbetasync
+           1.639416 	for  BBdustsynccorr
+           0.105426 	for  A_planck
+           0.007004 	for  H0
+           0.038895 	for  sigma8
+           0.007552 	for  Omega_Lambda
+           0.023220 	for  YHe
+           0.023222 	for  A_s
+           0.000192 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 6271 points of burn-in, and first 50 percent, keep 865 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 3413 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.005734 	for  omega_b
+           0.058835 	for  omega_cdm
+           0.023667 	for  h
+           0.016446 	for  ln10^{10}A_s
+           1.268804 	for  n_s
+           0.383346 	for  tau_reio
+           0.097624 	for  r
+           0.107047 	for  m_ncdm_interacting
+           7.988057 	for  log10G_eff_ncdm_interacting
+           7.548275 	for  deg_ncdm_interacting
+           0.042894 	for  m_ncdm_standard
+           6.577177 	for  deg_ncdm_standard
+           1.618637 	for  M
+           0.181159 	for  BBdust
+           0.161542 	for  BBsync
+           0.167050 	for  BBalphadust
+           0.012863 	for  BBbetadust
+           1.559830 	for  BBalphasync
+           0.643992 	for  BBbetasync
+           2.139768 	for  BBdustsynccorr
+           0.123297 	for  A_planck
+           0.024723 	for  H0
+           0.015231 	for  sigma8
+           0.001042 	for  Omega_Lambda
+           0.160025 	for  YHe
+           0.160039 	for  A_s
+           0.374385 	for  z_reio
+--> Not computing covariance matrix
+--> Scanning file chains/SIDR_interacting_and_std_T_5_2mio_M_tweaks_old_pantheon/2026-04-15_2000000__1.txt: Removed 6271 points of burn-in, and first 50 percent, keep 865 steps
+                                                                                 2026-04-15_2000000__6.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__3.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__4.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__5.txt: Removed everything: chain not converged
+                                                                                 2026-04-15_2000000__2.txt: Removed 1174 points of burn-in, and first 50 percent, keep 3913 steps
+--> Computing mean values
+--> Computing variance
+--> Computing convergence criterium (Gelman-Rubin)
+ -> R-1 is 0.002662 	for  omega_b
+           0.000303 	for  omega_cdm
+           0.003366 	for  h
+           0.012753 	for  ln10^{10}A_s
+           0.666691 	for  n_s
+           0.252962 	for  tau_reio
+           0.107527 	for  r
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-04-15T14:46:24.115] error: *** JOB 4726006 ON s62n07 CANCELLED AT 2026-04-15T14:46:24 DUE to SIGNAL Terminated ***
+[2026-04-15T14:46:24.115] error: *** STEP 4726006.0 ON s62n07 CANCELLED AT 2026-04-15T14:46:24 DUE to SIGNAL Terminated ***
